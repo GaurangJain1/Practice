@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    int arr[3][3]={1,2,3,4,5,6,7,8,9};
+    int c=0;
+    int sr=0;
+    int er=2;
+    int sc=0;
+    int ec=2;
+    while(c,9){
+        for(int i=sc;i<=ec;i++){
+            cout<<arr[sr][i]<<" "<<endl;
+            c++;
+        }
+        sr++;
+        for(int i=sr;i<=er;i++){
+            cout<<arr[i][ec]<<" "<<endl;
+            c++;
+        }
+        ec--;
+        for(int i=ec;i>=sc;i--){
+            cout<<arr[er][i]<<" "<<endl;
+            c++;
+        }
+        er--;
+        for(int i=er;i>=sr;i--){
+            cout<<arr[i][sc]<<" "<<endl;
+            c++;
+        }
+        sc++;
+    }
+    //cout<<row;
+    return 0;
+}
