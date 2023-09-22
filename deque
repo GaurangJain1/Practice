@@ -1,0 +1,29 @@
+#include <deque>
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    deque<int>d;
+    d.push_back(3);
+     d.push_back(5);
+      d.push_back(4);
+    d.push_front(7);
+    
+    for(int i:d){
+       // cout<<i<<" ";
+    }
+    //d.pop_back();
+    for(int i:d){
+        //cout<<i<<" ";
+    }
+    //d.pop_front();
+    for(int i:d){
+        cout<<i<<" ";
+    }
+    cout<<d.empty();
+    cout<<"size="<<d.size();
+    return 0;
+}

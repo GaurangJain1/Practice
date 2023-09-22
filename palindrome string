@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int le(char c[]){
+    int count=0;
+    for(int i=0;c[i] != '\0';i++){
+        count++;
+    }
+    return count;
+}
+int pal(char c[],int l){
+    int s=0,e=l-1 ;
+    while(s<=e){
+        if(c[s++]==c[e--]){
+        
+        }
+        else{
+        return 0;
+        }
+    }
+    return 1;
+}
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    char c[10];
+    cin>>c;
+    int l=le(c);
+    cout<<pal(c,l);
+ 
+    return 0;
+}

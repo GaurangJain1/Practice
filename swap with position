@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int swap(int n ,int p){
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i];
+    }
+    
+    int e=p;
+    int l=n-1;
+    while(l>e){
+        int s=a[l];
+        a[l]=a[e];
+        a[e]=s;
+        l--;
+        e++;
+    }
+    
+    for(int i=0;i<n;i++){
+        cout<<endl<<a[i];
+    }
+    return 0;
+}
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    int n;
+    cin>>n;
+    int p;
+    cin>>p;
+    swap(n,p);
+    return 0;
+}

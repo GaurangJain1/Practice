@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+char lc(char c){
+    char temp=c-'A'+'a';
+    return temp;
+}
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    char c='W';
+    cout<<c;
+    cout<<lc(c);
+    return 0;
+}

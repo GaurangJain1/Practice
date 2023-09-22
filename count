@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int l(char c[]){
+    int count=0;
+    for(int i=0;c[i] != "\0";i++){
+        count++;
+    }
+    return count;
+}
+int main() {
+    // Write C++ code here
+    std::cout << "Hello world!";
+    char c[10];
+    cin>>c;
+    cout<<l(c);
+    return 0;   
+}
