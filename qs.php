@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+        
         $unsortedArray = array(3,5,6,1,2);
         $sortedArray = array();
         // $sortedArray[3] = 5;
@@ -18,27 +19,25 @@
         // echo "hello";
         $length = count($unsortedArray);
         quickSort($unsortedArray,0,$length-1);
-
-        function quickSort($Arr,$start,$end){
+        function quickSort(&$Arr,$start,$end){
             if($end<=$start){
                 return;
             }
+            
             $p = partition($Arr,$start,$end);
-
             quickSort($Arr,$start,$p -1);
             quickSort($Arr,$p +1,$end);
-
         }
-        function partition($arr,$s,$e){
+        function partition(&$arr,$s,$e){
+            
             $pivot = $arr[$s];
-
             $cnt = 0;
-            for($i = s+1; $i<=$e; $i++) {
+            for($i = $s+1; $i<=$e; $i++) {
                 if($arr[$i] <=$pivot) {
+                    
                     $cnt++;
                 }
             }
-
             //place pivot at right position
             $pivotIndex = $s + $cnt;
             // swap(arr[pivotIndex], arr[s]);
@@ -48,30 +47,30 @@
             //left and right wala part smbhal lete h 
             $i = $s;
             $j = $e;
-
             while($i < $pivotIndex && $j > $pivotIndex) {
-
                 while($arr[$i] <= $pivot) 
                 {
                     $i++;
                 }
-
-                while($arr[j] > $pivot) {
+                while($arr[$j] > $pivot) {
                     $j--;
                 }
-
                 if($i < $pivotIndex && $j > $pivotIndex) {
                     // swap(arr[i++], arr[j--]);
                     $t = $arr[$i];
                     $arr[$i] = $arr[$j];
                     $arr[$j] = $t;
+                    $i++;
+                    $j--;
                     
                 }
-
             }
-
             return $pivotIndex;
-
+        }
+        
+        for ($i=0; $i < $length; $i++) { 
+            
+            echo $unsortedArray[$i];
         }
     ?>
 </body>
